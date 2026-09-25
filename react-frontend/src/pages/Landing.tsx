@@ -53,11 +53,11 @@ function Landing() {
               stock <span className='text-primary'>prediction</span> app
             </h1>
             <p className='leading-loose mt-4 text-muted-foreground'>
-              This stock analysis application integrates a LSTM model built with
-              Keras within a Django REST Framework backend and a React frontend.
-              It evaluates the model's predictions against historical price
-              data, alongside 100-day and 200-day moving averages, indicators
-              commonly used by analysts to gauge price trends
+              This stock prediction application integrates a LSTM model built
+              with Keras within a Django REST Framework backend and a React
+              frontend. It evaluates the model's predictions against historical
+              price data, alongside 100-day and 200-day moving averages,
+              indicators commonly used by analysts to gauge price trends
             </p>
             <p className='leading-loose mt-4 text-muted-foreground'>
               <span className='font-bold'>Disclaimer:</span> This model{' '}
