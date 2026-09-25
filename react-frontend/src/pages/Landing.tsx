@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import DemoLoginButton from '@/components/DemoLoginButton'
-import { useNavigate } from 'react-router'
+import { Link } from 'react-router'
 import {
   Carousel,
   CarouselContent,
@@ -43,7 +43,6 @@ const screenshots = [
 ]
 
 function Landing() {
-  const navigate = useNavigate()
   return (
     <main className='page-center'>
       <div className='align-elements'>
@@ -73,9 +72,7 @@ function Landing() {
               actually happened
             </p>
             <div className='flex flex-wrap items-center gap-4 mt-4'>
-              <Button onClick={() => navigate('/dashboard')}>
-                Get Started
-              </Button>
+              <Button render={<Link to='/dashboard'>Get Started</Link>} />
               <DemoLoginButton />
             </div>
           </div>
