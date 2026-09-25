@@ -85,5 +85,5 @@ This is unsurprising as stock prices are unpredictable, meaning that there is no
 - [yfinance](https://github.com/ranaroussi/yfinance): historical price data
 - [Keras](https://keras.io/) / [TensorFlow](https://www.tensorflow.org/): LSTM model
 - [scikit-learn](https://scikit-learn.org/): data scaling and evaluation metrics
-- [pandas](https://pandas.pydata.org/) & [NumPy](https://numpy.org/): data preprocessing
+- [pandas](https://pandas.pydata.org/) & [NumPy](https://numpy.org/): data processing
 - [Matplotlib](https://matplotlib.org/): chart generation
