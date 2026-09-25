@@ -2,7 +2,7 @@
 
 **Live site:** Not currently deployed
 
-This stock analysis application integrates an LSTM model built with Keras within a Django REST Framework backend and a React frontend. It evaluates the model's predictions against historical price data, alongside 100-day and 200-day moving averages, indicators commonly used by analysts to gauge price trends.
+This stock prediction application integrates an LSTM model built with Keras within a Django REST Framework backend and a React frontend. It evaluates the model's predictions against historical price data, alongside 100-day and 200-day moving averages, indicators commonly used by analysts to gauge price trends.
 
 **Disclaimer:** This model **does not** forecast future prices and **should not be used for real trading or investment decisions**. Relying on it for actual investments can lead to significant financial loss. It is tested by predicting each day in the most recent 30% of a stock's price history, using the preceding 100 days as input, and comparing those predictions against what actually happened.
 
