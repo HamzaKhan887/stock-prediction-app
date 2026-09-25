@@ -14,7 +14,7 @@ function Navbar() {
         <Link to='/'>
           <div className='text-2xl font-semibold'>Stock Prediction App</div>
           <div className='text-sm text-muted-foreground'>
-            Using React, Django and ML
+            Using React, DRF and ML
           </div>
         </Link>
       </div>
