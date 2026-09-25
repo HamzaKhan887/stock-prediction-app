@@ -20,7 +20,7 @@ function Navbar() {
       </div>
       <div className='flex flex-col sm:flex-row gap-2 items-center'>
         {isLoggedIn && username && (
-          <div className='flex items-center gap-2 mr-2'>
+          <div className='flex items-center gap-2 sm:mr-2'>
             <Avatar>
               <AvatarFallback className='bg-primary/10 text-primary font-semibold uppercase'>
                 {username.charAt(0)}

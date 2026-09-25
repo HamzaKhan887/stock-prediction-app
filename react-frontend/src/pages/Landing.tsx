@@ -46,7 +46,7 @@ function Landing() {
   return (
     <main className='page-center'>
       <div className='align-elements'>
-        <section className='w-full grid lg:grid-cols-2 items-center'>
+        <section className='w-full grid lg:grid-cols-2 items-center py-10 lg:py-0'>
           <div className='max-w-2xl'>
             <h1 className='capitalize text-4xl md:text-6xl font-bold'>
               stock <span className='text-primary'>prediction</span> app

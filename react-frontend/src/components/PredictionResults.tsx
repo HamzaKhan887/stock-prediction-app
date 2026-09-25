@@ -11,7 +11,7 @@ function PredictionResults({ data }: { data: StockAnalysisResponse }) {
   ]
 
   return (
-    <section className='w-full max-w-4xl space-y-6 p-5 mt-5'>
+    <section className='w-full max-w-4xl space-y-6 mt-5'>
       <MetricsCard
         mse={data.mse}
         rmse={data.rmse}
