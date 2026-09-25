@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <style>
+        .icon { fill: #7033ff; stroke: #7033ff; }
+        @media (prefers-color-scheme: dark) {
+        .icon { fill: #8c5cff; stroke: #8c5cff; }
+        }
+    </style>
+    <g class="icon">
+        <rect x="172" y="512" width="97" height="386" stroke="none"/>
+        <rect x="377" y="397" width="97" height="501" stroke="none"/>
+        <rect x="570" y="512" width="97" height="386" stroke="none"/>
+        <rect x="751" y="397" width="97" height="501" stroke="none"/>
+        <polyline points="112,448 437,220 630,388 888,135"
+                  fill="none" stroke-width="60" stroke-linejoin="miter"/>
+    </g>
+</svg>
