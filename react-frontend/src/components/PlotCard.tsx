@@ -7,7 +7,7 @@ function PlotCard({ title, src }: { title: string; src: string }) {
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <img src={src} alt={title} className='w-full rounded' />
+        <img src={src} alt={title} className='w-full rounded-xl' />
       </CardContent>
     </Card>
   )
