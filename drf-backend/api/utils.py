@@ -4,15 +4,16 @@ from datetime import datetime
 
 import matplotlib.pyplot as plt
 import numpy as np
+import onnxruntime as ort
 import pandas as pd
 import yfinance as yf
 from django.conf import settings
-from keras.models import load_model
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import MinMaxScaler
 
-MODEL_PATH = settings.BASE_DIR.parent / "model" / "stock_prediction_model.keras"
-model = load_model(MODEL_PATH)
+MODEL_PATH = settings.BASE_DIR / "stock_prediction_model.onnx"
+session = ort.InferenceSession(str(MODEL_PATH))
+input_name = session.get_inputs()[0].name
 
 
 def fetch_stock_data(ticker):
@@ -93,8 +94,8 @@ def run_prediction(df):
         y_test.append(input_data[i, 0])
     x_test, y_test = np.array(x_test), np.array(y_test)
 
-    y_predicted = model.predict(x_test)
-
+    y_predicted = session.run(None, {input_name: x_test.astype(np.float32)})[0]
+    
     y_predicted = scaler.inverse_transform(y_predicted.reshape(-1, 1)).flatten()
     y_test = scaler.inverse_transform(y_test.reshape(-1, 1)).flatten()
     return y_predicted, y_test
