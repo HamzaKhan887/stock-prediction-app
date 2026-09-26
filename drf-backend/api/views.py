@@ -8,8 +8,7 @@ from .utils import (
     calculate_metrics,
     fetch_currency,
     fetch_stock_data,
-    generate_100dma_plot,
-    generate_200dma_plot,
+    generate_100_and_200dma_plot,
     generate_closing_price_plot,
     generate_prediction_plot,
     run_prediction,
@@ -47,8 +46,7 @@ class StockPredictionAPIView(APIView):
             {
                 "status": "success",
                 "plot_img": generate_closing_price_plot(df, ticker, currency),
-                "plot_100_dma": generate_100dma_plot(df, ma100, ticker, currency),
-                "plot_200_dma": generate_200dma_plot(df, ma100, ma200, ticker, currency),
+                "plot_100_and_200_dma": generate_100_and_200dma_plot(df, ma100, ma200, ticker, currency),
                 "plot_prediction": generate_prediction_plot(
                     df, y_test, y_predicted, ticker, currency
                 ),

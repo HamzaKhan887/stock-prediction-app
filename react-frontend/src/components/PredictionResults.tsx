@@ -6,8 +6,10 @@ function PredictionResults({ data }: { data: StockAnalysisResponse }) {
   const plots = [
     { title: 'Predicted vs Actual Price', src: data.plot_prediction },
     { title: 'Closing Price', src: data.plot_img },
-    { title: '100-day Moving Average', src: data.plot_100_dma },
-    { title: '200-day Moving Average', src: data.plot_200_dma },
+    {
+      title: '100-day and 200-day Moving Averages',
+      src: data.plot_100_and_200_dma,
+    },
   ]
 
   return (

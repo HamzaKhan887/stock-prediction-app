@@ -13,7 +13,6 @@ import DashboardResults1 from '../assets/dashboard-results-1.png'
 import DashboardResults2 from '../assets/dashboard-results-2.png'
 import DashboardResults3 from '../assets/dashboard-results-3.png'
 import DashboardResults4 from '../assets/dashboard-results-4.png'
-import DashboardResults5 from '../assets/dashboard-results-5.png'
 
 const screenshots = [
   {
@@ -34,11 +33,7 @@ const screenshots = [
   },
   {
     src: DashboardResults4,
-    alt: '100-day moving average chart for AAPL',
-  },
-  {
-    src: DashboardResults5,
-    alt: '200-day moving average chart for AAPL',
+    alt: '100-day and 200-day moving averages chart for AAPL',
   },
 ]
 

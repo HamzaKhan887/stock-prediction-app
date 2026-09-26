@@ -55,8 +55,7 @@ export type SearchFormProps = {
 export type StockAnalysisResponse = {
   status: string
   plot_img: string
-  plot_100_dma: string
-  plot_200_dma: string
+  plot_100_and_200_dma: string
   plot_prediction: string
   mse: number
   rmse: number

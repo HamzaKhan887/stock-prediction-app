@@ -35,14 +35,9 @@ A demo account is available directly from the landing page (no sign-up required)
 
 ![Closing Price](./react-frontend/src/assets/dashboard-results-3.png)
 
-**100-day Moving Average**
+**100-day and 200-day Moving Averages**
 
-![100-day Moving Average](./react-frontend/src/assets/dashboard-results-4.png)
-
-**200-day Moving Average**
-
-![200-day Moving Average](./react-frontend/src/assets/dashboard-results-5.png)
-
+![100-day and 200-day Moving Averages](./react-frontend/src/assets/dashboard-results-4.png)
 
 ## How the model works
 

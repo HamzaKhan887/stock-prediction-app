@@ -27,7 +27,7 @@ def fetch_stock_data(ticker):
 
 def save_plot():
     buf = io.BytesIO()
-    plt.savefig(buf, format="png", dpi=80)
+    plt.savefig(buf, format="png")
     plt.close("all")
     return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
@@ -41,34 +41,22 @@ def fetch_currency(ticker):
 
 def generate_closing_price_plot(df, ticker, currency=None):
     plt.switch_backend("AGG")
-    plt.figure(figsize=(10, 4))
+    plt.figure(figsize=(12, 5))
     plt.plot(df.Close, label="Closing Price")
-    plt.title(f"Closing price of {ticker}")
+    plt.title(f"Closing Price of {ticker}")
     plt.xlabel("Date")
     plt.ylabel(f"Price ({currency})" if currency else "Price")
     plt.legend()
     return save_plot()
 
 
-def generate_100dma_plot(df, ma100, ticker, currency=None):
+def generate_100_and_200dma_plot(df, ma100, ma200, ticker, currency=None):
     plt.switch_backend("AGG")
-    plt.figure(figsize=(10, 4))
-    plt.plot(df.Close, label="Closing Price")
-    plt.plot(ma100, "r", label="100 DMA")
-    plt.title(f"100 Days Moving Average of {ticker}")
-    plt.xlabel("Date")
-    plt.ylabel(f"Price ({currency})" if currency else "Price")
-    plt.legend()
-    return save_plot()
-
-
-def generate_200dma_plot(df, ma100, ma200, ticker, currency=None):
-    plt.switch_backend("AGG")
-    plt.figure(figsize=(10, 4))
+    plt.figure(figsize=(12, 5))
     plt.plot(df.Close, label="Closing Price")
     plt.plot(ma100, "r", label="100 DMA")
     plt.plot(ma200, "g", label="200 DMA")
-    plt.title(f"200 Days Moving Average of {ticker}")
+    plt.title(f"100-day and 200-day Moving Averages of {ticker}")
     plt.xlabel("Date")
     plt.ylabel(f"Price ({currency})" if currency else "Price")
     plt.legend()
@@ -101,7 +89,7 @@ def run_prediction(df):
 
 def generate_prediction_plot(df, y_test, y_predicted, ticker, currency):
     plt.switch_backend("AGG")
-    plt.figure(figsize=(10, 4))
+    plt.figure(figsize=(12, 5))
     test_dates = df.index[-len(y_test) :]
     plt.plot(test_dates, y_test, "b", label="Original Price")
     plt.plot(test_dates, y_predicted, "r", label="Predicted Price")
