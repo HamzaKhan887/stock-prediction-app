@@ -20,7 +20,9 @@ def fetch_stock_data(ticker):
     now = datetime.now()
     start = datetime(now.year - 10, now.month, now.day)
     end = now
-    return yf.download(ticker, start, end)
+    df = yf.download(ticker, start, end)
+    df = df.dropna()
+    return df
 
 
 def save_plot():
@@ -80,7 +82,6 @@ def run_prediction(df):
     split_index = int(len(df) * 0.7)
     training_data = pd.DataFrame(df.Close[:split_index])
     testing_data = pd.DataFrame(df.Close[split_index:])
-
     scaler = MinMaxScaler(feature_range=(0, 1))
 
     past_100_days = training_data.tail(100)
@@ -95,7 +96,7 @@ def run_prediction(df):
     x_test, y_test = np.array(x_test), np.array(y_test)
 
     y_predicted = session.run(None, {input_name: x_test.astype(np.float32)})[0]
-    
+
     y_predicted = scaler.inverse_transform(y_predicted.reshape(-1, 1)).flatten()
     y_test = scaler.inverse_transform(y_test.reshape(-1, 1)).flatten()
     return y_predicted, y_test
