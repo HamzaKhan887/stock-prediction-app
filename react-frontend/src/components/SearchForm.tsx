@@ -45,7 +45,7 @@ function SearchForm({ onSearch, isPending }: SearchFormProps) {
         <CardTitle>Search Stock Ticker</CardTitle>
         <CardDescription>
           Enter a stock ticker to see how the LSTM model's predictions compare
-          with the real price history.
+          with the real price history
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -72,6 +72,11 @@ function SearchForm({ onSearch, isPending }: SearchFormProps) {
             />
           </FieldGroup>
         </form>
+        <p className='mt-4 text-sm text-muted-foreground'>
+          The first request may take up to a minute to wake the server, and
+          after a few searches the server may restart due to high memory usage.
+          If a search doesn't return a result, wait a moment and try again
+        </p>
       </CardContent>
       <CardFooter>
         <Field orientation='horizontal'>
