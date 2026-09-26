@@ -41,7 +41,7 @@ def fetch_currency(ticker):
 
 def generate_closing_price_plot(df, ticker, currency=None):
     plt.switch_backend("AGG")
-    plt.figure(figsize=(12, 5))
+    plt.figure(figsize=(10, 4))
     plt.plot(df.Close, label="Closing Price")
     plt.title(f"Closing price of {ticker}")
     plt.xlabel("Date")
@@ -50,10 +50,9 @@ def generate_closing_price_plot(df, ticker, currency=None):
     return save_plot()
 
 
-def generate_100dma_plot(df, ticker, currency=None):
-    ma100 = df.Close.rolling(100).mean()
+def generate_100dma_plot(df, ma100, ticker, currency=None):
     plt.switch_backend("AGG")
-    plt.figure(figsize=(12, 5))
+    plt.figure(figsize=(10, 4))
     plt.plot(df.Close, label="Closing Price")
     plt.plot(ma100, "r", label="100 DMA")
     plt.title(f"100 Days Moving Average of {ticker}")
@@ -63,11 +62,9 @@ def generate_100dma_plot(df, ticker, currency=None):
     return save_plot()
 
 
-def generate_200dma_plot(df, ticker, currency=None):
-    ma100 = df.Close.rolling(100).mean()
-    ma200 = df.Close.rolling(200).mean()
+def generate_200dma_plot(df, ma100, ma200, ticker, currency=None):
     plt.switch_backend("AGG")
-    plt.figure(figsize=(12, 5))
+    plt.figure(figsize=(10, 4))
     plt.plot(df.Close, label="Closing Price")
     plt.plot(ma100, "r", label="100 DMA")
     plt.plot(ma200, "g", label="200 DMA")
@@ -104,7 +101,7 @@ def run_prediction(df):
 
 def generate_prediction_plot(df, y_test, y_predicted, ticker, currency):
     plt.switch_backend("AGG")
-    plt.figure(figsize=(12, 5))
+    plt.figure(figsize=(10, 4))
     test_dates = df.index[-len(y_test) :]
     plt.plot(test_dates, y_test, "b", label="Original Price")
     plt.plot(test_dates, y_predicted, "r", label="Predicted Price")

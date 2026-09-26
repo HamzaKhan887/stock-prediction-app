@@ -18,11 +18,9 @@ function PredictionResults({ data }: { data: StockAnalysisResponse }) {
         r2={data.r2}
         currency={data.currency}
       />
-      {
-        //plots.map((plot) => (
-        //<PlotCard key={plot.title} {...plot} />
-        //))
-      }
+      {plots.map((plot) => (
+        <PlotCard key={plot.title} {...plot} />
+      ))}
     </section>
   )
 }
