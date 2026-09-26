@@ -44,12 +44,12 @@ class StockPredictionAPIView(APIView):
         return Response(
             {
                 "status": "success",
-                # "plot_img": generate_closing_price_plot(df, ticker, currency),
-                # "plot_100_dma": generate_100dma_plot(df, ticker, currency),
-                # "plot_200_dma": generate_200dma_plot(df, ticker, currency),
-                # "plot_prediction": generate_prediction_plot(
-                #     df, y_test, y_predicted, ticker, currency
-                # ),
+                "plot_img": generate_closing_price_plot(df, ticker, currency),
+                "plot_100_dma": generate_100dma_plot(df, ticker, currency),
+                "plot_200_dma": generate_200dma_plot(df, ticker, currency),
+                "plot_prediction": generate_prediction_plot(
+                    df, y_test, y_predicted, ticker, currency
+                ),
                 "mse": mse,
                 "rmse": rmse,
                 "r2": r2,
