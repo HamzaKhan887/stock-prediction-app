@@ -75,6 +75,7 @@ This is unsurprising as stock prices are unpredictable, meaning that there is no
 - [djangorestframework-simplejwt](https://django-rest-framework-simplejwt.readthedocs.io/): JWT authentication
 - [django-cors-headers](https://github.com/adamchainz/django-cors-headers): CORS handling
 - [python-decouple](https://github.com/HBNetwork/python-decouple): environment variable management
+- [Supabase](https://supabase.com/): database
 
 **Model**
 - [yfinance](https://github.com/ranaroussi/yfinance): historical price data
