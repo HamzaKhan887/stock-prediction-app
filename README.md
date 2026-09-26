@@ -1,6 +1,6 @@
 # Stock Prediction App
 
-**Live site:** [hk-stockprediction.vercel.app](https://hk-stockprediction.vercel.app/)
+**Live site:** [https://hk-stockprediction.vercel.app/](https://hk-stockprediction.vercel.app/)
 
 This stock prediction application integrates an LSTM model built with Keras within a Django REST Framework backend and a React frontend. It evaluates the model's predictions against historical price data, alongside 100-day and 200-day moving averages, indicators commonly used by analysts to gauge price trends.
 
@@ -75,6 +75,7 @@ This is unsurprising as stock prices are unpredictable, meaning that there is no
 - [djangorestframework-simplejwt](https://django-rest-framework-simplejwt.readthedocs.io/): JWT authentication
 - [django-cors-headers](https://github.com/adamchainz/django-cors-headers): CORS handling
 - [python-decouple](https://github.com/HBNetwork/python-decouple): environment variable management
+- [Supabase](https://supabase.com/): database
 
 **Model**
 - [yfinance](https://github.com/ranaroussi/yfinance): historical price data
