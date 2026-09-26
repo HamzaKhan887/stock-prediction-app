@@ -68,9 +68,9 @@ function Landing() {
             </p>
             <p className='mt-4 text-sm text-muted-foreground'>
               Logging in (including using Try Demo) may take up to a minute
-              while the server wakes up, and after a couple of searches it may
-              restart due to high memory usage. If a search fails and an error
-              pops up, wait a moment and try again
+              while the server wakes up, and after a couple of searches the
+              server may restart due to high memory usage. If a search fails and
+              an error pops up, wait a moment and try again
             </p>
             <div className='flex flex-wrap items-center gap-4 mt-4'>
               <Button render={<Link to='/dashboard'>Get Started</Link>} />
