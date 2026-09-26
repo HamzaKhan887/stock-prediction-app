@@ -1,6 +1,6 @@
 # Stock Prediction App
 
-**Live site:** [hk-stockprediction.vercel.app](https://hk-stockprediction.vercel.app/)
+**Live site:** [hk-stockprediction.vercel.app](https://hk-stockprediction.vercel.app)
 
 This stock prediction application integrates an LSTM model built with Keras within a Django REST Framework backend and a React frontend. It evaluates the model's predictions against historical price data, alongside 100-day and 200-day moving averages, indicators commonly used by analysts to gauge price trends.
 
