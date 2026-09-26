@@ -74,8 +74,9 @@ function SearchForm({ onSearch, isPending }: SearchFormProps) {
         </form>
         <p className='mt-4 text-sm text-muted-foreground'>
           The first request may take up to a minute to wake the server, and
-          after a few searches the server may restart due to high memory usage.
-          If a search doesn't return a result, wait a moment and try again
+          after a couple of searches the server may restart due to high memory
+          usage. If a search fails and an error pops up, wait a moment and try
+          again
         </p>
       </CardContent>
       <CardFooter>
