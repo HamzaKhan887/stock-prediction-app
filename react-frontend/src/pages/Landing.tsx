@@ -47,8 +47,8 @@ function Landing() {
               stock <span className='text-primary'>prediction</span> app
             </h1>
             <p className='leading-loose mt-4 text-muted-foreground'>
-              This stock prediction application integrates a LSTM model built
-              with Keras within a Django REST Framework backend and a React
+              This stock prediction application integrates an LSTM model built
+              with Keras into a Django REST Framework backend and a React
               frontend. It evaluates the model's predictions against historical
               price data, alongside 100-day and 200-day moving averages,
               indicators commonly used by analysts to gauge price trends
@@ -62,9 +62,15 @@ function Landing() {
               </span>
               . Relying on it for actual investments can lead to significant
               financial loss. It is tested by predicting each day in the most
-              recent 30% of a stock's price history, using the preceding 100
-              days as input, and comparing those predictions against what
+              recent 30% of a stock's price history, using each day's preceding
+              100 days as input, and comparing those predictions against what
               actually happened
+            </p>
+            <p className='mt-4 text-sm text-muted-foreground'>
+              Logging in (including using Try Demo) may take up to a minute
+              while the server wakes up, and after a couple of searches it may
+              restart due to high memory usage. If a search fails and an error
+              pops up, wait a moment and try again
             </p>
             <div className='flex flex-wrap items-center gap-4 mt-4'>
               <Button render={<Link to='/dashboard'>Get Started</Link>} />
