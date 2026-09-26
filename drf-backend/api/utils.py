@@ -27,8 +27,8 @@ def fetch_stock_data(ticker):
 
 def save_plot():
     buf = io.BytesIO()
-    plt.savefig(buf, format="png")
-    plt.close()
+    plt.savefig(buf, format="png", dpi=80)
+    plt.close("all")
     return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
