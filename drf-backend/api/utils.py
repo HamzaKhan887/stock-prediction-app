@@ -65,13 +65,15 @@ def generate_100_and_200dma_plot(df, ma100, ma200, ticker, currency=None):
 
 def run_prediction(df):
     split_index = int(len(df) * 0.7)
-    training_data = pd.DataFrame(df.Close[:split_index])
-    testing_data = pd.DataFrame(df.Close[split_index:])
+    training_data = pd.DataFrame(df.Close.iloc[:split_index])
+    testing_data = pd.DataFrame(df.Close.iloc[split_index:])
+
     scaler = MinMaxScaler(feature_range=(0, 1))
+    scaler.fit(training_data)
 
     past_100_days = training_data.tail(100)
     final_df = pd.concat([past_100_days, testing_data], ignore_index=True)
-    input_data = scaler.fit_transform(final_df)
+    input_data = scaler.transform(final_df)
 
     x_test = []
     y_test = []
